@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Ejemplo de HTML5">
+  <meta name="keywords" content="HTML5, CSS3, JavaScript">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <link rel="shortcut icon" href="./imagenes/Logo.png">
+  <title>Plantilla</title>
+  <link rel="stylesheet" href="./css/plantilla.css">
+</head>
+
+<body>
+  <div id="contenedor">
+    <header id="cabecera">
+        <picture style="margin: 5px;">
+          <source media="(min-width: 500px)" srcset="imagenes/LogoPlantilla.png">
+          <img id="imagenTitulo" src="imagenes/Logop.png" alt="Logo CIFP">
+        </picture>
+        <h1 id="titulo">Plantilla genérica de la web </h1>
+
+      
+    </header>
+    <nav id="menu">
+      <input type="checkbox" id="menuopciones">
+      <label for="menuopciones"> ☰ </label>    
+      <ul>
+        <li>Principal</li>
+        <li>Fotos</li>
+        <li>Videos</li>
+        <li>Contacto</li>
+      </ul>
+
+    </nav>
+    <section id="seccion">
+      <article>
+        <header>
+          <hgroup>
+            <h1>Conversor de base</h1>
+          </hgroup>
+        </header>
+        <br>
+        <label for="dato">Número:<br></label>
+        <input type="text" id="dato">
+        <div>
+          <br>
+          Convertir desde:
+          <input type="radio" name="base" id="decimal" checked/>
+          <label for="decimal">Decimal</label>
+          <input type="radio" name="base" id="binario" />
+          <label for="binario">Binario</label>
+          <input type="radio" name="base" id="octal"/>
+          <label for="octal">Octal</label>
+          <input type="radio" name="base" id="hexadecimal"/>
+          <label for="hexadecimal">Hexadecimal</label>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div>
+          <label for="resultDec">Decimal: </label>
+          <input type="text" id="resultDec"/>
+
+          <br>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-binary" viewBox="0 0 16 16">
+            <path d="M7.05 11.885c0 1.415-.548 2.206-1.524 2.206C4.548 14.09 4 13.3 4 11.885c0-1.412.548-2.203 1.526-2.203.976 0 1.524.79 1.524 2.203zm-1.524-1.612c-.542 0-.832.563-.832 1.612 0 .088.003.173.006.252l1.559-1.143c-.126-.474-.375-.72-.733-.72zm-.732 2.508c.126.472.372.718.732.718.54 0 .83-.563.83-1.614 0-.085-.003-.17-.006-.25l-1.556 1.146zm6.061.624V14h-3v-.595h1.181V10.5h-.05l-1.136.747v-.688l1.19-.786h.69v3.633h1.125z"/>
+            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+          </svg>
+          <label for="resultBin">Binario: </label>
+          <input type="text" id="resultBin"/>
+
+          <br>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-8-square-fill" viewBox="0 0 16 16">
+            <path d="M6.623 6.094c0 .738.586 1.254 1.383 1.254s1.377-.516 1.377-1.254c0-.733-.58-1.23-1.377-1.23s-1.383.497-1.383 1.23Zm-.281 3.644c0 .838.72 1.412 1.664 1.412.943 0 1.658-.574 1.658-1.412 0-.843-.715-1.424-1.658-1.424-.944 0-1.664.58-1.664 1.424Z"/>
+            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm8.97 9.803c0 1.394-1.218 2.355-2.988 2.355-1.763 0-2.953-.955-2.953-2.344 0-1.271.95-1.851 1.647-2.003v-.065c-.621-.193-1.33-.738-1.33-1.781 0-1.225 1.09-2.121 2.66-2.121s2.654.896 2.654 2.12c0 1.061-.738 1.595-1.336 1.782v.065c.703.152 1.647.744 1.647 1.992Z"/>
+          </svg>
+          <i class="bi bi-8-square-fill"></i>
+          <label for="resultOct">Octal: </label>
+          <input type="text" id="resultOct"/>
+
+          <br>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hexagon" viewBox="0 0 16 16">
+            <path d="M14 4.577v6.846L8 15l-6-3.577V4.577L8 1l6 3.577zM8.5.134a1 1 0 0 0-1 0l-6 3.577a1 1 0 0 0-.5.866v6.846a1 1 0 0 0 .5.866l6 3.577a1 1 0 0 0 1 0l6-3.577a1 1 0 0 0 .5-.866V4.577a1 1 0 0 0-.5-.866L8.5.134z"/>
+          </svg>
+          <label for="resultHex">Hexadecimal: </label>
+          <input type="text" id="resultHex"/>
+        </div>
+      </article>
+    </section>
+    <aside id="columna">
+      <blockquote>Mensaje número uno</blockquote>
+      <blockquote>Mensaje número dos</blockquote>
+    </aside>
+    <footer id="pie">
+      Desarrollo de Aplicaciones Web(DAW) © CIFP Santa Catalina
+    </footer>
+  </div>
+</body>
+<script src="js/js.js"></script>
+</html>
