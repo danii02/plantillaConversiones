@@ -8,23 +8,19 @@ let base = 10;
 let regex = /[^0-9]/g;
 
 document.getElementById("decimal").onclick = () => {
-    dato.value = parseInt(dato.value, base).toString(base = 10);
-    if (isNaN(dato.value)) dato.value = "";
+    dato.value = validar(parseInt(dato.value, base), base = 10);
     regex = /[^0-9]/g;
 };
 document.getElementById("binario").onclick = () => {
-    dato.value = parseInt(dato.value, base).toString(base = 2);
-    if (isNaN(dato.value)) dato.value = "";
+    dato.value = validar(parseInt(dato.value, base), base = 2);
     regex = /[^01]/g;
 };
 document.getElementById("octal").onclick = () => {
-    dato.value = parseInt(dato.value, base).toString(base = 8);
-    if (isNaN(dato.value)) dato.value = "";
+    dato.value = validar(parseInt(dato.value, base), base = 8);
     regex = /[^0-7]/g;
 };
 document.getElementById("hexadecimal").onclick = () => {
-    dato.value = parseInt(dato.value, base).toString(base = 16);
-    if (isNaN(dato.value)) dato.value = "";
+    dato.value = validar(parseInt(dato.value, base), base = 16);
     regex = /[^0-9a-fA-F]/g;
 };
 
@@ -40,10 +36,13 @@ dato.oninput = () => {
 
 function actualizarContenido() {
     let numeroActual = parseInt(dato.value, base);
-    let nan = isNaN(numeroActual);
     
-    resultDec.value = nan ? "" : numeroActual.toString(10);
-    resultBin.value = nan ? "" : numeroActual.toString(2);
-    resultOct.value = nan ? "" : numeroActual.toString(8);
-    resultHex.value = nan ? "" : numeroActual.toString(16);
+    resultDec.value = validar(numeroActual, 10);
+    resultBin.value = validar(numeroActual, 2);
+    resultOct.value = validar(numeroActual, 8);
+    resultHex.value  = validar(numeroActual, 16);
+}
+
+function validar(n, b) {
+    return isNaN(n) ? "" : n.toString(b);
 }
